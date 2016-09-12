@@ -16,7 +16,7 @@
 	overflow: hidden;
 }
 
-.main .part{
+.part{
 	width: inherit;
 	height: 200px;
 	border-style: inset;
@@ -27,7 +27,7 @@
 	           opacity ease-in-out 0.4s;
 }
 
-.main .part .hid{
+.part .hid{
    top: 30px;
    opacity: 0;
 }
