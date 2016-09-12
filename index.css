@@ -27,7 +27,7 @@
 	           opacity ease-in-out 0.4s;
 }
 
-.part .hid{
+.hid{
    top: 30px;
    opacity: 0;
 }
