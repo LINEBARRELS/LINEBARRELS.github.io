@@ -1,51 +1,97 @@
-*{
-	margin: 0;
-	padding: 0;
+*
+{
+    margin: 0;
+    padding: 0;
 }
-body{
-	overflow: hidden;
+body
+{
+    overflow: hidden;
 }
-.nav{
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 40px;
-	background: rgba(0,0,0,.8);
-	z-index: 100;
+.nav
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+
+    width: 100%;
+    height: 40px;
+
+    background: rgba(0,0,0,.8);
 }
 
-.main{
-	/*margin-top: 40px;*/
-	width: 100%;
-	overflow: hidden;
+.main
+{
+    overflow: hidden;
+    /*margin-top: 40px;*/
+
+    width: 100%;
 }
 
-.part{
-	width: inherit;
-	height: 643px;
-	background: blue;
-	border-style: inset;
-	position: relative;
-	top: 0;
-	opacity: 1;
-	box-sizing:border-box;
-	transition:top ease-in-out 0.3s,
-	           opacity ease-in-out 0.4s;
+.part
+{
+    /*	border-style: inset;*/
+    position: relative;
+    top: -10px;
+
+    box-sizing: border-box;
+    width: inherit;
+    height: 643px;
+
+    transition: top ease-in-out .3s,
+    opacity ease-in-out .4s;
+
+    opacity: 1;
+    background: blue;
 }
 
-.hid{
-   top: 30px;
-   opacity: 0;
+.hid
+{
+    top: 30px;
+
+    opacity: 0;
 }
 
-#pic{
-	margin:10px auto;
-	display: block;
-	height: 40px;
-	width: 40px;
+#pic
+{
+    display: block;
+
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
 }
 
-#detail{
-	position: absolute;
-	
+#detail
+{
+    position: absolute;
+}
+
+.list
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 400px;
+}
+.list span
+{
+    display: inline-block;
+
+    width: 25%;
+    height: 30px;
+    margin-top: -9px;
+    margin-left: 5%;
+    padding-top: 8px;
+
+    text-align: center;
+
+    color: white;
+    border: 1px ridge rgba(255,254,253,.7);
+    transition:all 0.2s;
+}
+
+.list span:hover{
+	cursor: pointer;
+	color: black;
+	background:white;
 }

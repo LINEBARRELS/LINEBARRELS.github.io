@@ -1,17 +1,23 @@
 paper = {
     pages:[],
     border:[],
+    timer:null,
     init:function(){
 
     document.body.onmousewheel = function(e){
     e.preventDefault();
+    clearTimeout(this.timer);
+    this.timer=setTimeout(function(){
     switch(e.wheelDelta){
     case 120:
-             $('body').animate({scrollTop: document.body.scrollTop - 685}, 3000)
+             $('body').animate({scrollTop: document.body.scrollTop - 685}, 500)
+             console.log('上');
             break;
-    case -120:$('body').animate({scrollTop: document.body.scrollTop + 685}, 3000)
+    case -120:$('body').animate({scrollTop: document.body.scrollTop + 685}, 500)
+             console.log('下');
             break;
        }
+    }, 500);
     }
  
     $('.part').each(function(index, el) {
