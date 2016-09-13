@@ -12,6 +12,16 @@ a
 {
     text-decoration: none;
 }
+
+
+.main::webkit-scrollbar{
+    display: none;
+}
+body::webkit-scrollbar{
+    display: none;
+}
+
+
 .nav
 {
     position: fixed;
