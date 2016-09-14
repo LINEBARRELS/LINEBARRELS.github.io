@@ -106,14 +106,7 @@ body::webkit-scrollbar
     border-radius: 50%;
 }
 
-#detail
-{
-    position: absolute;
 
-    margin: 3px auto;
-
-    align-self: flex-end;
-}
 
 #detail > h2
 {
@@ -175,6 +168,17 @@ body::webkit-scrollbar
 
 
 @media screen and (min-width:500px){
+    #detail
+    {
+    position: absolute;
+
+    margin: 3px auto;
+
+    align-self: flex-end;
+
+    bottom: 0;
+    left: 35%;
+    }
     .list
     {
         position: absolute;
@@ -253,6 +257,17 @@ body::webkit-scrollbar
 
 
 @media all and (min-width:0) and (max-width:499px){
+    #detail
+{
+    position: absolute;
+
+    margin: 3px auto;
+
+    align-self: flex-end;
+
+    bottom: 0;
+
+}
     .list
     {
         width: 100%;
@@ -262,7 +277,7 @@ body::webkit-scrollbar
     .nali
     {
         position: relative;
-        top: 8px;
+        top: 4px;
 
         overflow: hidden;
 
@@ -293,7 +308,7 @@ body::webkit-scrollbar
 
         right: 0;
 
-        display: inline-block;
+        display: block;
 
         height: 50px;
         margin-top: 15px;

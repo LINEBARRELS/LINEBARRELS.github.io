@@ -97,7 +97,7 @@ paper = {
      $(window).on('resize',  function(event) {
          event.preventDefault();
          paper.height=document.querySelector('.part').offsetHeight;
-        console.log(paper.height);
+        // console.log(event);
      });
 
      // document.querySelector('.main').addEventListener('touchmove', function (event) { event.preventDefault(); });
