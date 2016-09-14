@@ -45,20 +45,23 @@ paper = {
     init:function(){
  
      this.height = document.querySelector('.part').offsetHeight ;
-     document.querySelector('.main').onmousewheel = function(e){
-     e.preventDefault();
-     clearTimeout(this.timer);
-     this.timer=setTimeout(function(){
-        switch(e.wheelDelta){
-            case 120:this.dealing(1,1);
-                     break;
-            case -120:this.dealing(2,1);
-                    break;
-        }
+     // document.querySelector('.main').onmousewheel = function(e){
+     // e.preventDefault();
+     // var de =e.wheelDelta||event.detail;
+     // clearTimeout(this.timer);
+     // this.timer=setTimeout(function(){
+     //    switch(de){
+     //        case 120:this.dealing(1,1);
+     //                 break;
+     //        case -120:this.dealing(2,1);
+     //                break;
+     //    }
         
-      }.bind(this), 500);
+     //  }.bind(this), 500);
 
-     }.bind(this)
+     // }.bind(this)
+
+     $.dealwheel();
 
      $('.show').on('click', function(event) {
          event.preventDefault();
@@ -122,6 +125,48 @@ paper = {
 }
 
 
+$.extend({
+    dealwheel:function() {
+        // body...
+        // console.log(this.get(0).offsetHeight);
+        if (navigator.userAgent.indexOf("Firefox")==-1) {
+            console.log('?');
+            document.querySelector('.main').onmousewheel=function(e){
+            e=e||window.event;
+            e.preventDefault();
+            
+             clearTimeout(paper.timer);
+             paper.timer=setTimeout(function(){
+             switch(e.wheelDelta){
+             case 120:paper.dealing(1,1);
+                    break;
+             case -120:paper.dealing(2,1);
+                    break;
+             } 
+              }, 500);
+            
+         }
+          
+        }//
+        else {
+            console.log('!');
+           document.querySelector('.main').addEventListener("DOMMouseScroll",function(e){
+             e.preventDefault();
+             console.log(e.detail);
+             clearTimeout(paper.timer);
+             paper.timer=setTimeout(function(){
+             switch(e.detail){
+             case -4:paper.dealing(1,1);
+                    break;
+             case 4:paper.dealing(2,1);
+                    break;
+             } 
+              }, 500);
+            
+           })
+        }//
+    }
+});
 
 
 
