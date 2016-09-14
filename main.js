@@ -96,6 +96,8 @@ paper = {
         console.log(paper.height);
      });
 
+     document.body.addEventListener('touchmove', function (event) { event.preventDefault(); }, false);
+
      // $('.part').css('height', 'value');
      $('.l').each(function(index, el) {
          el.addEventListener('click',function(){
