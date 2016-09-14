@@ -78,12 +78,21 @@ paper = {
      };
 
     paper.pages[0].init = function(){
-    console.log('第一页初始化');
+    
     paper.inited[0]='complete';
     }
 
     paper.pages[1].init = function(){
-        console.log('第二页初始化');
+        
+        setTimeout(function(){
+        $('.unit').addClass('tranX');
+        setTimeout(function(){
+            $('.unit:eq(0)').html('哈哈哈哈哈哈')
+        }, 700);
+        
+        }, 2000);
+        
+
         paper.inited[1]='complete';
     }
     
