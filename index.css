@@ -198,7 +198,11 @@ body::webkit-scrollbar
     margin-right: 30px;
 
     color: white;
+
+    cursor: pointer;
 }
+
+
 
 .member
 {

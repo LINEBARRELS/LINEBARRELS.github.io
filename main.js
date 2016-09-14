@@ -90,9 +90,24 @@ paper = {
 
      this.inited = Array(this.pages.length).fill('none');
 
-     
+     $(window).on('resize',  function(event) {
+         event.preventDefault();
+         paper.height=document.body.offsetHeight/paper.pages.length;
+        console.log(paper.height);
+     });
 
-     $('.part').css('height', 'value');
+     // $('.part').css('height', 'value');
+     $('.l').each(function(index, el) {
+         el.addEventListener('click',function(){
+            var d =paper.cur-index
+            if(d<0){
+                paper.dealing(2,-d)
+            }else 
+            if(d>0){
+                paper.dealing(1,d)
+            }
+         })
+     });
  
      setTimeout(function(){this.pages[0].classList.remove('hid');}.bind(this),500);
      this.pages[0].init()
