@@ -93,7 +93,7 @@ paper = {
 
      $(window).on('resize',  function(event) {
          event.preventDefault();
-         paper.height=document.body.offsetHeight/paper.pages.length;
+         paper.height=document.querySelector('.part').offsetHeight;
         console.log(paper.height);
      });
 
