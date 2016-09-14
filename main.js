@@ -97,7 +97,7 @@ paper = {
         console.log(paper.height);
      });
 
-     document.querySelector('.main').addEventListener('touchmove', function (event) { event.preventDefault(); });
+     // document.querySelector('.main').addEventListener('touchmove', function (event) { event.preventDefault(); });
      // document.ontouchstart=function(event){
      // event.preventDefault();
      // }
