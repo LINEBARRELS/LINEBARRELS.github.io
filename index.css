@@ -25,7 +25,7 @@ a
     text-decoration: none;
 }
 
-
+/*
 .main::webkit-scrollbar
 {
     display: none;
@@ -33,7 +33,7 @@ a
 body::webkit-scrollbar
 {
     display: none;
-}
+}*/
 
 
 .nav
