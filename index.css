@@ -253,7 +253,7 @@ body::webkit-scrollbar
     
 }
 
-#nali
+.nali
 {
     width: 100%;
     overflow: hidden;
@@ -265,7 +265,7 @@ body::webkit-scrollbar
     top: 8px;
 }
 
-#nali .on
+ .on
 {
     width: 100%;
     overflow: hidden;
@@ -304,6 +304,7 @@ body::webkit-scrollbar
 .show {
     display: inline-block;
     float: right;
+    margin-top: 3px;
 }
 
 #skill{

@@ -60,9 +60,10 @@ paper = {
 
      }.bind(this)
 
-     $('#show').on('click', function(event) {
+     $('.show').on('click', function(event) {
          event.preventDefault();
-         $('.list ul').toggleClass('on');
+         $('.nali').toggleClass('on');
+         console.log('heirenwenhao');
      });
   
      $('.part').each(function(index, el) {
@@ -96,7 +97,7 @@ paper = {
         console.log(paper.height);
      });
 
-     document.body.addEventListener('touchmove', function (event) { event.preventDefault(); }, false);
+     document.querySelector('.main').addEventListener('touchmove', function (event) { event.preventDefault(); });
 
      // $('.part').css('height', 'value');
      $('.l').each(function(index, el) {
