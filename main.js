@@ -14,8 +14,8 @@ paper = {
              }
              $('.main').css('transform','translateY(-'+this.cur*this.height+'px)');
              console.log('上');
-            if (Array.prototype.slice.call(this.pages[this.cur].classList).indexOf('hid')!=-1) {
-            this.pages[this.cur].classList.remove('hid')
+            if ($(this.pages[this.cur]).hasClass('hid')) {
+              $(this.pages[this.cur]).removeClass('hid')
             }
             if(this.inited[this.cur]==='none'&&this.pages[this.cur].init){
                 this.pages[this.cur].init();
@@ -31,8 +31,8 @@ paper = {
             
               $('.main').css('transform','translateY(-'+this.cur*this.height+'px)');
               console.log('下');
-              if (Array.prototype.slice.call(this.pages[this.cur].classList).indexOf('hid')!=-1) {
-              this.pages[this.cur].classList.remove('hid')
+              if ($(this.pages[this.cur]).hasClass('hid')) {
+              $(this.pages[this.cur]).removeClass('hid')
              }
              if(this.inited[this.cur]==='none'&&this.pages[this.cur].init){
                 this.pages[this.cur].init();
@@ -115,7 +115,7 @@ paper = {
          })
      });
  
-     setTimeout(function(){this.pages[0].classList.remove('hid');}.bind(this),500);
+     setTimeout(function(){$(this.pages[this.cur]).removeClass('hid');}.bind(this),500);
      this.pages[0].init()
      
     }//init
