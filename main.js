@@ -6,7 +6,7 @@ paper = {
     height:null,
     inited:null,
     dealing:function(side,option){
-    switch(side){
+     switch(side){
      case 1:{ 
              console.log(this.cur);
              if(this.cur!=0){
@@ -21,9 +21,9 @@ paper = {
                 this.pages[this.cur].init();
             }
             break;
-     }
+            }
      case 2:{
-              console.log(this.cur);
+            console.log(this.cur);
               if(this.cur!=this.pages.length-1){
                 this.cur += option;
               }
@@ -38,12 +38,8 @@ paper = {
                 this.pages[this.cur].init();
             }
              break;
-     }
-     case 3:{
-        $('.main').css('transform','translateY(-'+0+'px)');
-         this.cur=0;
-     }
-    }
+            }
+        }
 
     },
     init:function(){
@@ -91,11 +87,7 @@ paper = {
         setTimeout(function(){
         $('.unit').addClass('tranX');
         setTimeout(function(){
-            $('.unit:eq(0)').html('<p>熟悉各种常用标签</p><p>了解h5新增api</p>')
-            $('.unit:eq(1)').html('<p>熟悉基本的网页布局</p><p>熟悉css3动效</p>')
-            $('.unit:eq(2)').html('<p>熟练掌握基本语法</p><p>了解es6新增功能</p>')
-            $('.unit:eq(3)').html('<p>了解http,fs等模块</p><p>了解express框架</p>')
-            $('.unit:eq(4)').html('<p>了解各种基本的算法和数据结构</p><p>理解前后端交互</p><p><a href=\'https://github.com/LINEBARRELS/Test\'>练习作品</p><p>NWjs+Nedb+React的本地单页应用</p>')
+            $('.unit:eq(0)').html('哈哈哈哈哈哈')
         }, 700);
         
         }, 2000);
@@ -114,7 +106,6 @@ paper = {
      $(window).on('resize',  function(event) {
          event.preventDefault();
          paper.height=document.querySelector('.part').offsetHeight;
-         paper.dealing(3)
         // console.log(event);
      });
 
