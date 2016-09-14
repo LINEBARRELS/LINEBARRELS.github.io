@@ -151,17 +151,28 @@ body::webkit-scrollbar
    content: '----------->';
 }*/
 
+.p-two{
+    
+    
+    background-image: url(./img/leg.jpg);
+}
 
 
 .p-three
 {
-    background: gray;
+     background-image: url(./img/im.jpg);
+     background-position: center;
 }
 
 
+.fi{
+    align-self:center;
+}
 
-
-
+.fip{
+    padding: 30px;
+    font-size: 20px;
+}
 
 
 @media screen and (min-width:500px){
