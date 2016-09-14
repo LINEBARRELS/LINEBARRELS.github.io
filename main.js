@@ -59,6 +59,11 @@ paper = {
       }.bind(this), 500);
 
      }.bind(this)
+
+     $('#show').on('click', function(event) {
+         event.preventDefault();
+         $('.list ul').toggleClass('on');
+     });
   
      $('.part').each(function(index, el) {
      	this.pages.push(el)

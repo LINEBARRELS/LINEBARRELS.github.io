@@ -1,9 +1,12 @@
-@font-face {font-family: 'webfont';
-  src: url('//at.alicdn.com/t/93vvugp9ohpeewmi.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/93vvugp9ohpeewmi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/93vvugp9ohpeewmi.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/93vvugp9ohpeewmi.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/93vvugp9ohpeewmi.svg#思源黑体-粗') format('svg'); /* iOS 4.1- */
+@font-face
+{
+    font-family: 'webfont';
+
+    src: url('//at.alicdn.com/t/93vvugp9ohpeewmi.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/93vvugp9ohpeewmi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/93vvugp9ohpeewmi.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/93vvugp9ohpeewmi.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/93vvugp9ohpeewmi.svg#思源黑体-粗') format('svg'); /* iOS 4.1- */
 }
 
 *
@@ -22,10 +25,12 @@ a
 }
 
 
-.main::webkit-scrollbar{
+.main::webkit-scrollbar
+{
     display: none;
 }
-body::webkit-scrollbar{
+body::webkit-scrollbar
+{
     display: none;
 }
 
@@ -42,10 +47,6 @@ body::webkit-scrollbar{
     background: rgba(0,0,0,.8);
 }
 
-.nav >img{
-    position: relative;
-    top: -10px;
-}
 .main
 {
     overflow: hidden;
@@ -61,19 +62,20 @@ body::webkit-scrollbar{
 {
     /*  border-style: inset;*/
     position: relative;
+
+    display: flex;
     /*top: -10px;*/
 
     box-sizing: border-box;
     width: inherit;
     height: 100%;
 
-    display:flex;
-    justify-content:center;
-
     transition: top ease-in-out .5s,
     opacity ease-in-out .7s;
 
     opacity: 1;
+
+    justify-content: center;
 }
 
 .hid
@@ -85,100 +87,63 @@ body::webkit-scrollbar{
 
 #pic
 {
-    display: block;
-
-    width:200px;
-    height:200px;
-    margin: 10px auto;
-    border-radius: 50%;
     position: relative;
     top: 20px;
+
+    display: block;
+
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+
+    border-radius: 50%;
 }
 
 #detail
 {
     position: absolute;
-    margin:3px auto;
+
+    margin: 3px auto;
+
     align-self: flex-end;
-
 }
 
-#detail >h2 {
-   text-align: center;
-}
-
-#detail >p{
+#detail > h2
+{
     text-align: center;
 }
 
-#conn{
-    align-self:center;
-    width: 400px;
-    height: 300px;
+#detail > p
+{
+    text-align: center;
 }
 
-#conn div{
+#conn
+{
+    width: 400px;
+    height: 300px;
+
+    align-self: center;
+}
+
+#conn div
+{
     width: 100%;
     height: 33%;
     margin-left: 50px;
 }
 
-#conn div span{
+#conn div span
+{
     position: relative;
     top: -25px;
     left: 40px;
 }
-.list
-{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
 
-.l
-{
-    right: 0;
 
-    display: inline-block;
 
-    margin-right: 30px;
 
-    font-family: webfont;
 
-    color: white;
-
-    font-size: 18px;
-}
-.list > ul
-{
-    width: 100%;
-    height: 100%;
-}
-#perdetail
-{
-    position: absolute;
-
-    width: 100px;
-    height: 0;
-
-    transition: all .2s;
-
-    opacity: 0;
-    background: white;
-
-    display: block;
-}
-
-#perdetail > li{
-   display: block;
-}
-
-.fir:hover #perdetail
-{
-    height: 300px;
-
-    opacity: 1;
-}
 
 .p-one
 {
@@ -191,10 +156,165 @@ body::webkit-scrollbar{
 
 .p-two
 {
-    background: red;
+    
 }
 
 .p-three
 {
     background: gray;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:500px){
+
+
+.list
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.list > ul
+{
+    width: 100%;
+    height: 100%;
+}
+
+.l
+{
+
+    font-size: 18px;
+
+    right: 0;
+
+    display: inline-block;
+
+    margin-right: 30px;
+
+    color: white;
+}
+
+.member
+{
+    position: relative;
+    width: 40px;
+}
+
+.show{
+    display: none;
+}
+
+#skill{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-self: center;
+    flex-wrap:wrap;
+}
+
+#skill >p{
+    font-family: cursive;
+    flex:1;
+    align-self:center;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width:0px) and (max-width:499px){
+ .list
+{
+    height: 100%;
+    width: 100%;
+    
+}
+
+#nali
+{
+    width: 100%;
+    overflow: hidden;
+    background: rgba(5,5,5,.6);
+    position: relative;
+   
+    height: 0px;
+    transition: all 0.3s;
+    top: 8px;
+}
+
+#nali .on
+{
+    width: 100%;
+    overflow: hidden;
+    background: rgba(5,5,5,.6);
+    position: relative;
+   
+    height: 180px;
+
+}
+
+.l
+{
+
+    font-size: 18px;
+
+    right: 0;
+
+    display: inline-block;
+
+    margin-right: 30px;
+
+    color: white;
+
+        text-align: center;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.member
+{
+    position: relative;
+    width: 40px;
+    display: none;
+}
+
+.show {
+    display: inline-block;
+    float: right;
+}
+
+#skill{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-self: center;
+    flex-wrap:wrap;
+    flex-direction:column;
+}
+
+#skill >p{
+    font-family: cursive;
+    flex:1;
+    text-align: center;
+}
+ 
 }
