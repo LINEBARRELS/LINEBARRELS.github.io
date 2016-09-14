@@ -98,8 +98,8 @@ paper = {
      });
 
      document.querySelector('.main').addEventListener('touchmove', function (event) { event.preventDefault(); });
-     document.ontouchstart=function(){
-     return false;
+     document.ontouchstart=function(event){
+     event.preventDefault();
      }
 
      // $('.part').css('height', 'value');
