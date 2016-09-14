@@ -98,9 +98,9 @@ paper = {
      });
 
      document.querySelector('.main').addEventListener('touchmove', function (event) { event.preventDefault(); });
-     document.ontouchstart=function(event){
-     event.preventDefault();
-     }
+     // document.ontouchstart=function(event){
+     // event.preventDefault();
+     // }
 
      // $('.part').css('height', 'value');
      $('.l').each(function(index, el) {
