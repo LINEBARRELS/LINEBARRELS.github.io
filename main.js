@@ -4,6 +4,8 @@ var paper = {
     timer:null,
     cur:0,
     height:null,
+    startY:0,
+    moveEndY:0,
     inited:[],
     dealing:function(side,option){
      switch(side){
@@ -111,7 +113,7 @@ var paper = {
          event.preventDefault();
          $('.nali').toggleClass('on');
          // console.log('heirenwenhao');
-         alert('111111')
+         // alert('111111')
       });
   
       $('.part').each(function(index, el) {
@@ -165,11 +167,30 @@ var paper = {
         // console.log(event);
      });
 
-     // document.querySelector('.main').addEventListener('touchmove', function (event) { event.preventDefault(); });
-     // document.ontouchstart=function(event){
-     // event.preventDefault();
-     // }
 
+     // $(".main").on("touchstart", function(e) {
+     // e.preventDefault();
+     // this.startY = e.changedTouches[0].pageY;
+     // });
+
+     // $(".main").on("touchmove", function(e) {
+     // e.preventDefault();
+
+     // this.moveEndY = e.changedTouches[0].pageY,
+
+     // Y = this.moveEndY - this.startY;
+ 
+     // if ( Y > 0) {
+     //     this.dealing(2,1);
+     //     console.log('下');
+     //     this.startY= this.moveEndY=null;
+     // }
+     // else if ( Y < 0 ) {
+     //     this.dealing(1,1);
+     //     console.log('上');
+     //     this.startY= this.moveEndY=null;
+     // }
+     // }.bind(this));
      // $('.part').css('height', 'value');
      $('.l').each(function(index, el) {
          el.addEventListener('click',function(){
@@ -185,7 +206,7 @@ var paper = {
  
      setTimeout(function(){$(this.pages[this.cur]).removeClass('hid');}.bind(this),500);
      this.pages[0].init()
-     alert('oooo')
+     // alert('oooo')
     }//init
 }
 
@@ -197,9 +218,11 @@ var paper = {
 
 
 $(document).ready(function() {
-    try{
+
 	paper.init();
-   }catch(e){
-    alert(e)
-   }  
+   
 });
+
+window.onload=function(){
+    paper.init();
+}
