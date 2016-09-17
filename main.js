@@ -220,9 +220,9 @@ var paper = {
 //   paper.init();
 // })
 
-$().ready(function($){ 
+
 paper.init();
-})
+
 
 // $(document).ready(function() {
 
