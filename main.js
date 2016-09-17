@@ -8,12 +8,12 @@ paper = {
     dealing:function(side,option){
     switch(side){
      case 1:{ 
-             console.log(this.cur);
+             // console.log(this.cur);
              if(this.cur!=0){
                 this.cur -= option;
              }
              $('.main').css('transform','translateY(-'+this.cur*this.height+'px)');
-             console.log('上');
+             // console.log('上');
             if ($(this.pages[this.cur]).hasClass('hid')) {
               $(this.pages[this.cur]).removeClass('hid')
             }
@@ -23,14 +23,14 @@ paper = {
             break;
      }
      case 2:{
-              console.log(this.cur);
+              // console.log(this.cur);
               if(this.cur!=this.pages.length-1){
                 this.cur += option;
               }
               
             
               $('.main').css('transform','translateY(-'+this.cur*this.height+'px)');
-              console.log('下');
+              // console.log('下');
               if ($(this.pages[this.cur]).hasClass('hid')) {
               $(this.pages[this.cur]).removeClass('hid')
              }
@@ -111,6 +111,7 @@ paper = {
          event.preventDefault();
          $('.nali').toggleClass('on');
          // console.log('heirenwenhao');
+         alert('111111')
      });
   
      $('.part').each(function(index, el) {
@@ -182,6 +183,7 @@ paper = {
  
      setTimeout(function(){$(this.pages[this.cur]).removeClass('hid');}.bind(this),500);
      this.pages[0].init()
+     alert('oooo')
      
     }//init
 }
