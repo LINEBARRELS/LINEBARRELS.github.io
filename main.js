@@ -4,7 +4,7 @@ paper = {
     timer:null,
     cur:0,
     height:null,
-    inited:null,
+    inited:[],
     dealing:function(side,option){
     switch(side){
      case 1:{ 
@@ -70,7 +70,7 @@ paper = {
      $('.show').on('click', function(event) {
          event.preventDefault();
          $('.nali').toggleClass('on');
-         console.log('heirenwenhao');
+         // console.log('heirenwenhao');
      });
   
      $('.part').each(function(index, el) {
@@ -109,7 +109,11 @@ paper = {
              paper.inited[2]='complete';
     }
 
-     this.inited = Array(this.pages.length).fill('none');
+     // this.inited = Array(this.pages.length).fill('none');
+
+     for (let i = 0; i < this.pages.length; i++) {
+         this.inited.push('none')
+     };
 
      $(window).on('resize',  function(event) {
          event.preventDefault();
