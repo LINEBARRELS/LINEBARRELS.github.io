@@ -216,8 +216,12 @@ var paper = {
 // });
 
 
-Zepto(function($){
-  paper.init();
+// Zepto(function($){
+//   paper.init();
+// })
+
+$().ready(function($){ 
+paper.init();
 })
 
 // $(document).ready(function() {
@@ -226,6 +230,3 @@ Zepto(function($){
    
 // });
 
-// window.onload=function(){
-//     paper.init();
-// }
