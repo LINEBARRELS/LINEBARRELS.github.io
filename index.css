@@ -92,8 +92,7 @@ body::webkit-scrollbar
 
 #pic
 {
-    position: relative;
-    top: 20px;
+  
 
     display: block;
 
@@ -145,6 +144,9 @@ body::webkit-scrollbar
 .p-one
 {
     /*background: blue;*/
+    flex-direction: column;
+    align-items: center;
+
 }
 
 /*#detail > span:after{
@@ -178,14 +180,15 @@ body::webkit-scrollbar
 @media screen and (min-width:500px){
     #detail
     {
-    position: absolute;
+   /* position: absolute;*/
 
-    margin: 3px auto;
+    margin-left: auto;
+    margin-right: auto;
 
     align-self: flex-end;
 
-    bottom: 0;
-    left: 35%;
+   /* bottom: 0;*/
+   /* left: 35%;*/
     }
     .list
     {
@@ -278,13 +281,14 @@ body::webkit-scrollbar
 @media all and (min-width:0) and (max-width:499px){
     #detail
 {
-    position: absolute;
+    /*position: absolute;*/
 
-    margin: 3px auto;
+    margin-left: auto;
+    margin-right: auto;
 
     align-self: flex-end;
 
-    bottom: 0;
+    /*bottom: 0;*/
 
 }
     .list
