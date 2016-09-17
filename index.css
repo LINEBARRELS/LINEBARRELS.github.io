@@ -182,10 +182,10 @@ body::webkit-scrollbar
     {
    /* position: absolute;*/
 
-    margin-left: auto;
+   /* margin-left: auto;
     margin-right: auto;
-
-    align-self: flex-end;
+*/
+   /* align-self: flex-end;*/
 
    /* bottom: 0;*/
    /* left: 35%;*/
@@ -283,10 +283,10 @@ body::webkit-scrollbar
 {
     /*position: absolute;*/
 
-    margin-left: auto;
-    margin-right: auto;
+   /* margin-left: auto;
+    margin-right: auto;*/
 
-    align-self: flex-end;
+    /*align-self: flex-end;*/
 
     /*bottom: 0;*/
 
