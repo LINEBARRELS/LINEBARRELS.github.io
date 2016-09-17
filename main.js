@@ -1,4 +1,4 @@
-paper = {
+var paper = {
     pages:[],
     border:[],
     timer:null,
@@ -6,7 +6,7 @@ paper = {
     height:null,
     inited:[],
     dealing:function(side,option){
-    switch(side){
+     switch(side){
      case 1:{ 
              // console.log(this.cur);
              if(this.cur!=0){
@@ -21,8 +21,8 @@ paper = {
                 this.pages[this.cur].init();
             }
             break;
-     }
-     case 2:{
+      }
+      case 2:{
               // console.log(this.cur);
               if(this.cur!=this.pages.length-1){
                 this.cur += option;
@@ -38,8 +38,8 @@ paper = {
                 this.pages[this.cur].init();
             }
              break;
-     }
-     case 3:{
+      }
+      case 3:{
         $('.main').css('transform','translateY(-'+0+'px)');
          this.cur=0;
      }
@@ -107,27 +107,27 @@ paper = {
 
      this.dealwheel();
 
-     $('.show').on('click', function(event) {
+      $('.show').on('click', function(event) {
          event.preventDefault();
          $('.nali').toggleClass('on');
          // console.log('heirenwenhao');
          alert('111111')
-     });
+      });
   
-     $('.part').each(function(index, el) {
+      $('.part').each(function(index, el) {
      	this.pages.push(el)
      }.bind(this));
      
-     for (let i = 1; i < this.pages.length; i++) {
+      for (let i = 1; i < this.pages.length; i++) {
      	this.border.push(this.pages[i].offsetTop)
      };
 
-    paper.pages[0].init = function(){
+     paper.pages[0].init = function(){
     
-    paper.inited[0]='complete';
-    }
+     paper.inited[0]='complete';
+     }
 
-    paper.pages[1].init = function(){
+     paper.pages[1].init = function(){
         
         setTimeout(function(){
         $('.unit').addClass('tranX');
@@ -143,12 +143,12 @@ paper = {
         
 
         paper.inited[1]='complete';
-    }
+     }
     
-    paper.pages[2].init = function(){
+     paper.pages[2].init = function(){
         console.log('第三页初始化');
              paper.inited[2]='complete';
-    }
+     }
 
      // this.inited = Array(this.pages.length).fill('none');
 
@@ -184,7 +184,6 @@ paper = {
      setTimeout(function(){$(this.pages[this.cur]).removeClass('hid');}.bind(this),500);
      this.pages[0].init()
      alert('oooo')
-     
     }//init
 }
 
