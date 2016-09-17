@@ -216,13 +216,16 @@ var paper = {
 // });
 
 
+Zepto(function($){
+  paper.init();
+})
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-	paper.init();
+// 	paper.init();
    
-});
+// });
 
-window.onload=function(){
-    paper.init();
-}
+// window.onload=function(){
+//     paper.init();
+// }
