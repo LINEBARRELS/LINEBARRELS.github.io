@@ -219,7 +219,7 @@ var paper = {
 // Zepto(function($){
 //   paper.init();
 // })
-
+alert('????')
 
 paper.init();
 
