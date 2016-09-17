@@ -117,6 +117,8 @@ var paper = {
       $('.part').each(function(index, el) {
      	this.pages.push(el)
      }.bind(this));
+
+      // $('.main').css('height', this.pages.length+'00%');
      
       for (let i = 1; i < this.pages.length; i++) {
      	this.border.push(this.pages[i].offsetTop)
