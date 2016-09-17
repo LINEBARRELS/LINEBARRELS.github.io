@@ -196,5 +196,9 @@ paper = {
 
 
 $(document).ready(function() {
+    try{
 	paper.init();
+   }catch(e){
+    alert(e)
+   }  
 });
