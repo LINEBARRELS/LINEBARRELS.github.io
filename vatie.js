@@ -117,7 +117,7 @@ var paper = {
       });
 
       $('.main').on('click', function(event) {
-          event.preventDefault();
+          // event.preventDefault();
           $('.nali').removeClass('on')
       });
   
