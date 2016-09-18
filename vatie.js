@@ -122,7 +122,7 @@ var paper = {
 
       // $('.main').css('height', this.pages.length+'00%');
      
-      for (let i = 1; i < this.pages.length; i++) {
+      for (var i = 1; i < this.pages.length; i++) {
      	this.border.push(this.pages[i].offsetTop)
      };
 
@@ -154,9 +154,8 @@ var paper = {
              paper.inited[2]='complete';
      }
 
-     // this.inited = Array(this.pages.length).fill('none');
 
-     for (let i = 0; i < this.pages.length; i++) {
+     for (var i = 0; i < this.pages.length; i++) {
          this.inited.push('none')
      };
 
@@ -206,27 +205,15 @@ var paper = {
  
      setTimeout(function(){$(this.pages[this.cur]).removeClass('hid');}.bind(this),500);
      this.pages[0].init()
-     // alert('oooo')
+
     }//init
 }
 
 
-// $.extend({
-    
-// });
+Zepto(function($){
+  paper.init();
+})
 
 
-// Zepto(function($){
-//   paper.init();
-// })
-alert('????')
 
-paper.init();
-
-
-// $(document).ready(function() {
-
-// 	paper.init();
-   
-// });
 
