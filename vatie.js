@@ -115,6 +115,11 @@ var paper = {
          // console.log('heirenwenhao');
          // alert('111111')
       });
+
+      $('.main').on('click', function(event) {
+          event.preventDefault();
+          $('.nali').removeClass('on')
+      });
   
       $('.part').each(function(index, el) {
      	this.pages.push(el)
