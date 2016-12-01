@@ -6,7 +6,15 @@
   url('./font/FZDaBiaoSong.ttf') format('svg'); /* iOS 4.1- */
 }
 
+@keyframes ro{
+    0%{
+        transform: rotateZ(0deg) rotateX(0deg);
+    }
 
+    100%{
+        transform: rotateZ(360deg) rotateX(360deg);
+    }
+}
 *
 {
     margin: 0;
@@ -82,6 +90,8 @@ body::webkit-scrollbar
     opacity: 1;
 
     justify-content: center;
+
+    overflow:auto;
 }
 
 .hid
@@ -98,7 +108,7 @@ body::webkit-scrollbar
     display: block;
 
     width: 200px;
-    height: 200px;
+    height: 230px;
 
     border-radius: 50%;
 }
@@ -263,6 +273,50 @@ body::webkit-scrollbar
         transform:rotatey(360deg);
 
     }
+
+    .box{
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    animation: ro 2s ease-in-out infinite;
+    width: 2em;
+    height: 2em;
+    transform:rotate3d(30,10,0,10deg);
+    }
+
+    .box > div{
+    position: absolute;
+    border: 1px solid rgba(0,0,0,.5);
+    box-shadow: 0 0 10px #000;
+    height: 100%;
+    width: 100%;
+    }
+   
+
+
+
+    .front{
+           transform: translateZ(1em);
+    }
+        
+    .back{
+       transform: rotateY(180deg) translateZ(1em);
+    }
+
+    .top{
+       transform: rotateX(90deg) translateZ(1em);
+    }
+
+    .bottom{
+       transform: rotateX(-90deg) translateZ(1em);
+    }    
+
+    .left{
+      transform: rotateY(-90deg) translateZ(1em);
+    } 
+
+    .right{
+      transform: rotateY(90deg) translateZ(1em);
+    }
 }
 
 
@@ -390,5 +444,9 @@ body::webkit-scrollbar
         -webkit-transform:rotatex(360deg);
         transform:rotatex(360deg);
 
+    }
+
+    .box{
+        display: none;
     }
 }
