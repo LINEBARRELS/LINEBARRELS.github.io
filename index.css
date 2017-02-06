@@ -219,7 +219,7 @@ body::webkit-scrollbar
     position: relative;
 
     display: flex;
-    overflow: auto;
+    overflow: hidden;
     /*top: -10px;*/
 
     box-sizing: border-box;
@@ -512,6 +512,9 @@ body::webkit-scrollbar
 
 @media all and (min-width:0) and (max-width:499px)
 {
+    #pic{
+        display: none;
+    }
     #detail
     {
         /*position: absolute;*/
