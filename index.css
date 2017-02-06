@@ -543,6 +543,8 @@ body::webkit-scrollbar
                 transition: all .3s;
 
         background: rgba(5,5,5,.6);
+
+        top: 1px;
     }
 
     .on
@@ -589,7 +591,7 @@ body::webkit-scrollbar
         display: inline-block;
         float: right;
 
-        /*margin-top: 3px;*/
+        margin-top: 3px;
     }
 
     #skill
