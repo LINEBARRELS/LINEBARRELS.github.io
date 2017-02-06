@@ -16,8 +16,8 @@ var paper = {
              }
              $('.main').css('transform','translateY(-'+this.cur*this.height+'px)');
              // console.log('上');
-            if ($(this.pages[this.cur]).hasClass('hid')) {
-              $(this.pages[this.cur]).removeClass('hid')
+            if (!$(this.pages[this.cur]).hasClass('active')) {
+              $(this.pages[this.cur]).addClass('active')
             }
             if(this.inited[this.cur]==='none'&&this.pages[this.cur].init){
                 this.pages[this.cur].init();
@@ -33,8 +33,8 @@ var paper = {
             
               $('.main').css('transform','translateY(-'+this.cur*this.height+'px)');
               // console.log('下');
-              if ($(this.pages[this.cur]).hasClass('hid')) {
-              $(this.pages[this.cur]).removeClass('hid')
+              if (!$(this.pages[this.cur]).hasClass('active')) {
+              $(this.pages[this.cur]).addClass('active')
              }
              if(this.inited[this.cur]==='none'&&this.pages[this.cur].init){
                 this.pages[this.cur].init();
@@ -138,24 +138,24 @@ var paper = {
 
      paper.pages[1].init = function(){
         
-        setTimeout(function(){
-        $('.unit').addClass('tranX');
-        setTimeout(function(){
-            $('.unit:eq(0)').html('<p>熟悉各种常用标签</p><p>了解h5新增api</p>')
-            $('.unit:eq(1)').html('<p>熟悉基本的网页布局</p><p>熟悉css3动效</p>')
-            $('.unit:eq(2)').html('<p>熟练掌握基本语法</p><p>了解es6新增功能</p>')
-            $('.unit:eq(3)').html('<p>了解http,fs等模块</p><p>了解Koa框架</p>')
-            $('.unit:eq(4)').html('<p>了解各种基本的算法和数据结构</p><p>理解前后端交互</p><p><a href=\'https://github.com/LINEBARRELS/Test\' target=\'_blank\'>练习作品</p><p>NWjs+Nedb+React的本地单页应用</p><p><a href=\'https://github.com/LINEBARRELS/ChatRoom\' target=\'_blank\'>Koa+Socket.io聊天室</a></p>')
-        }, 700);
+        // setTimeout(function(){
+        // $('.unit').addClass('tranX');
+        // setTimeout(function(){
+        //     $('.unit:eq(0)').html('<p>熟悉各种常用标签</p><p>了解h5新增api</p>')
+        //     $('.unit:eq(1)').html('<p>熟悉基本的网页布局</p><p>熟悉css3动效</p>')
+        //     $('.unit:eq(2)').html('<p>熟练掌握基本语法</p><p>了解es6新增功能</p>')
+        //     $('.unit:eq(3)').html('<p>了解http,fs等模块</p><p>了解Koa框架</p>')
+        //     $('.unit:eq(4)').html('<p>了解各种基本的算法和数据结构</p><p>理解前后端交互</p><p><a href=\'https://github.com/LINEBARRELS/Test\' target=\'_blank\'>练习作品</p><p>NWjs+Nedb+React的本地单页应用</p><p><a href=\'https://github.com/LINEBARRELS/ChatRoom\' target=\'_blank\'>Koa+Socket.io聊天室</a></p>')
+        // }, 700);
         
-        }, 2000);
+        // }, 2000);
         
 
         paper.inited[1]='complete';
      }
     
      paper.pages[2].init = function(){
-        console.log('第三页初始化');
+        // console.log('第三页初始化');
              paper.inited[2]='complete';
      }
 
@@ -208,7 +208,7 @@ var paper = {
          })
      });
  
-     setTimeout(function(){$(this.pages[this.cur]).removeClass('hid');}.bind(this),500);
+     setTimeout(function(){$(this.pages[this.cur]).addClass('active');}.bind(this),0);
      this.pages[0].init()
 
     }//init
