@@ -414,6 +414,8 @@ body::webkit-scrollbar
 
         align-self: center;
         flex-wrap: nowrap;
+
+        overflow: hidden;
     }
 
     .unit
@@ -596,6 +598,8 @@ body::webkit-scrollbar
 
         align-self: center;
         flex-wrap: nowrap;
+
+        overflow: hidden;
     }
 
     .unit

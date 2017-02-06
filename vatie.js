@@ -150,7 +150,10 @@ var paper = {
         
         // }, 2000);
         
-
+        $('#skill').Cloud9Carousel( {
+         autoPlay: 1,
+         bringToFront: true
+        } );
         paper.inited[1]='complete';
      }
     
