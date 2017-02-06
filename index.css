@@ -589,7 +589,7 @@ body::webkit-scrollbar
         display: inline-block;
         float: right;
 
-        margin-top: 3px;
+        /*margin-top: 3px;*/
     }
 
     #skill
