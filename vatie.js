@@ -138,22 +138,22 @@ var paper = {
 
      paper.pages[1].init = function(){
         
-        // setTimeout(function(){
-        // $('.unit').addClass('tranX');
-        // setTimeout(function(){
-        //     $('.unit:eq(0)').html('<p>熟悉各种常用标签</p><p>了解h5新增api</p>')
-        //     $('.unit:eq(1)').html('<p>熟悉基本的网页布局</p><p>熟悉css3动效</p>')
-        //     $('.unit:eq(2)').html('<p>熟练掌握基本语法</p><p>了解es6新增功能</p>')
-        //     $('.unit:eq(3)').html('<p>了解http,fs等模块</p><p>了解Koa框架</p>')
-        //     $('.unit:eq(4)').html('<p>了解各种基本的算法和数据结构</p><p>理解前后端交互</p><p><a href=\'https://github.com/LINEBARRELS/Test\' target=\'_blank\'>练习作品</p><p>NWjs+Nedb+React的本地单页应用</p><p><a href=\'https://github.com/LINEBARRELS/ChatRoom\' target=\'_blank\'>Koa+Socket.io聊天室</a></p>')
-        // }, 700);
+        setTimeout(function(){
+        $('.unit').addClass('tranX');
+        setTimeout(function(){
+            $('.unit:eq(0)').html('<p>熟悉各种常用标签</p><p>了解h5新增api</p>')
+            $('.unit:eq(1)').html('<p>熟悉基本的网页布局</p><p>熟悉css3动效</p>')
+            $('.unit:eq(2)').html('<p>熟练掌握基本语法</p><p>了解es6新增功能</p>')
+            $('.unit:eq(3)').html('<p>了解http,fs等模块</p><p>了解Koa框架</p>')
+            $('.unit:eq(4)').html('<p>了解各种基本的算法和数据结构</p><p>理解前后端交互</p><p><a href=\'https://github.com/LINEBARRELS/Test\' target=\'_blank\'>练习作品</p><p>NWjs+Nedb+React的本地单页应用</p><p><a href=\'https://github.com/LINEBARRELS/ChatRoom\' target=\'_blank\'>Koa+Socket.io聊天室</a></p>')
+        }, 700);
         
-        // }, 2000);
+        }, 2000);
         
-        $('#skill').Cloud9Carousel( {
-         autoPlay: 1,
-         bringToFront: true
-        } );
+        // $('#skill').Cloud9Carousel( {
+        //  autoPlay: 1,
+        //  bringToFront: true
+        // } );
         paper.inited[1]='complete';
      }
     
